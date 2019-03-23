@@ -1,0 +1,20 @@
+Automated testing using JEST
+
+ - yarn add --dev jest
+
+ - add ' "test": "jest" ' inside your package.json
+
+ - Create a folder called tests
+    - Every file you create a file, make sure you add the '.test.js' extension
+
+
+Example of a test
+------------------------------------
+
+const add = (a, b) => a + b;
+
+test('should add two numbers', () =>{
+    const result = add(4, 3);
+    expect(result).toBe(7);
+});
+

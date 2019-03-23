@@ -1,0 +1,48 @@
+
+Understanding Redux and deconstruction
+-----------------------------------------------
+
+Install redux
+----------------------------------------------
+npm install redux --save
+
+Setting up a store
+-----------------------------------------------
+const {createStore} = require('redux);
+const store = createStore();
+
+* Store has two things: 1. A state, 2. A Reducer
+
+const state = {}
+
+const reducer = (state, action)
+    -   State is the state of certain components
+    -   Acion is a simple commangd
+
+    Example is (action) add onto the state of my number(state) which is at 1
+    store.dispatch({ type: 'ADD' *action*})
+
+
+
+
+What is Redux?
+------------------------------------------------
+Helps with state management in react
+
+
+
+
+
+
+Reducer - Move functionality into the store (CRUD operations) - so that we do not write functions in every single page
+Example:
+     switch(action.type){
+
+        case 'ADD_EXPENSE': 
+            return [
+                ... state,
+                action.expense
+            ]
+
+        case 'REMOVE_EXPENSE':
+            return state.filter(({id}) => id !== action.id );
