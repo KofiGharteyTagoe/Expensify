@@ -1,10 +1,10 @@
 const path = require('path');
-const MiniCssExtractPlugin  = require('mini-css-extract-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 //module.exports is a node thing (Expose a function to another file)
 module.exports = (env) => {
     const isProduction = env === 'production';
-    const CSSExtract = new MiniCssExtractPlugin({filename:'styles.css'});
+    const CSSExtract = new MiniCssExtractPlugin({filename: 'styles.css'});
 
     return{
             //Where is the entry point?
@@ -24,21 +24,22 @@ module.exports = (env) => {
                 //css-loader, style-loader (npm package)
                 // loader: yarn add sass-loader node-sass
                 test: /\.s?css$/,
-                use: [
+                use:[
+
                     MiniCssExtractPlugin.loader,
-                    {
-                        loader: 'css-loader',
-                        options: {
-                            sourceMap: true
+                        {
+                            loader: 'css-loader',
+                            options: {
+                                sourceMap: true
+                            }
+                        },
+                        {
+                            loader: 'sass-loader',
+                            options: {
+                                sourceMap: true
+                            }
                         }
-                    },
-                    {
-                        loader: 'sass-loader',
-                        options: {
-                            sourceMap: true
-                        }
-                    }
-                ]
+                ],
             }]
         },
         plugins:[

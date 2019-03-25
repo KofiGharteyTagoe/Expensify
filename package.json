@@ -14,7 +14,7 @@
   "dependencies": {
     "babel-cli": "6.24.1",
     "babel-core": "6.25.0",
-    "babel-loader": "7.1.1",
+    "babel-loader": "^8.0.5",
     "babel-plugin-transform-class-properties": "^6.24.1",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-preset-env": "1.5.2",
@@ -23,7 +23,6 @@
     "enzyme": "^3.9.0",
     "enzyme-adapter-react-16": "1.0.0",
     "enzyme-to-json": "3.0.1",
-    "extract-text-webpack-plugin": "3.0.0",
     "jest": "23.6.0",
     "live-server": "^1.2.1",
     "mini-css-extract-plugin": "^0.5.0",
@@ -50,12 +49,24 @@
   },
   "devDependencies": {
     "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.4.0",
+    "@babel/preset-env": "^7.4.2",
     "babel-preset-es2015": "^6.24.1",
     "eslint": "^5.12.1",
     "eslint-config-google": "^0.11.0",
+    "extract-text-webpack-plugin": "^4.0.0-beta.0",
     "gulp-babel": "^8.0.0",
     "typescript": "^3.3.4000",
     "webpack": "^4.29.6",
     "webpack-cli": "^3.2.3"
-  }
+  },
+  "description": "Install yarn/ npm\r \tNo need to use gulp since we will be using webpack\r Install React and React-DOM to allow us to use JSX\r Install live-server to allow us to run a local server\r Install Webpack (3.1.0)\r Install babel-core (6.25.0) and babel-loader(7.1.1) <- Need more reading into this.\r \tBabel allows you to write ES6 code which it then translate it to ES5 which older browsers might understand",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KofiGharteyTagoe/Expensify.git"
+  },
+  "bugs": {
+    "url": "https://github.com/KofiGharteyTagoe/Expensify/issues"
+  },
+  "homepage": "https://github.com/KofiGharteyTagoe/Expensify#readme"
 }
